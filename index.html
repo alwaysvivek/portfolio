@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend + ML Engineer | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Neural Network Background Canvas -->
+    <canvas id="neural-network-bg"></canvas>
+
+    <!-- Fixed Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;Backend + ML Engineer&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1 class="hero-title fade-in">
+                    <span class="name-text">Vivek Dagar</span>
+                </h1>
+                <p class="hero-tagline fade-in-delay-1">
+                    🏴‍☠️ Linux Enthusiast | 📍 From Delhi, India 🇮🇳
+                </p>
+                <p class="hero-description fade-in-delay-2">
+                    Backend developer exploring AI systems, scalable design, and intelligent automation tools.
+                </p>
+            </div>
+        </div>
+        <div class="hero-right" onclick="toggleTerminal()">
+            <div class="wireframe-cube">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> Featured Projects
+            </h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Evolving AI Biosphere -->
+                <div class="project-card" data-project="biosphere">
+                    <div class="project-image">
+                        <div class="biosphere-animation">
+                            <div class="organism organism-1"></div>
+                            <div class="organism organism-2"></div>
+                            <div class="organism organism-3"></div>
+                            <div class="data-flow"></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Evolving AI Biosphere</h3>
+                        <p class="project-description">
+                            A complex simulation environment where AI agents evolve through 
+                            genetic algorithms and neural networks, creating emergent behaviors 
+                            in a dynamic ecosystem.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Genetic Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: DeepGrep API -->
+                <div class="project-card" data-project="deepgrep">
+                    <div class="project-image">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <span class="terminal-dot dot-red"></span>
+                                <span class="terminal-dot dot-yellow"></span>
+                                <span class="terminal-dot dot-green"></span>
+                                <span class="terminal-title">deepgrep-api</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command typing-effect" data-text='curl -X POST "https://api.deepgrep.io/search"'></span>
+                                </div>
+                                <div class="terminal-line response">
+                                    <span class="json-key">"results"</span>: [
+                                </div>
+                                <div class="terminal-line response indent">
+                                    { <span class="json-key">"confidence"</span>: <span class="json-value">0.94</span> }
+                                </div>
+                                <div class="terminal-line response">]</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">DeepGrep API</h3>
+                        <p class="project-description">
+                            High-performance semantic search API leveraging transformer models 
+                            for intelligent code search across massive codebases with sub-second 
+                            response times.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Go</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Transformers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Fake News Detector -->
+                <div class="project-card" data-project="fakenews">
+                    <div class="project-image">
+                        <div class="streamlit-ui">
+                            <div class="ui-header">
+                                <div class="ui-icon">🔍</div>
+                                <h4>News Authenticity Analyzer</h4>
+                            </div>
+                            <div class="ui-input">
+                                <div class="input-label">Enter article text or URL</div>
+                                <div class="input-field"></div>
+                            </div>
+                            <div class="ui-result">
+                                <div class="result-meter">
+                                    <div class="meter-fill authenticity-75"></div>
+                                </div>
+                                <div class="result-label">Authenticity Score: <strong>75%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fake News Detector</h3>
+                        <p class="project-description">
+                            ML-powered web application for detecting misinformation using 
+                            natural language processing and ensemble learning techniques. 
+                            Features real-time analysis and explainable AI insights.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> Technical Expertise
+            </h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Languages & Frameworks</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="95">
+                            <div class="skill-header">
+                                <span class="skill-icon">🐍</span>
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-header">
+                                <span class="skill-icon">🔷</span>
+                                <span class="skill-name">Go</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-header">
+                                <span class="skill-icon">⚡</span>
+                                <span class="skill-name">TensorFlow / PyTorch</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">DevOps & Infrastructure</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-header">
+                                <span class="skill-icon">🐧</span>
+                                <span class="skill-name">Linux</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-header">
+                                <span class="skill-icon">⚙️</span>
+                                <span class="skill-name">CI/CD (GitHub Actions)</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-header">
+                                <span class="skill-icon">🐳</span>
+                                <span class="skill-name">Docker / Kubernetes</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Get In Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    Interested in collaborating on AI/ML projects or discussing innovative solutions? 
+                    Let's connect and build something amazing together.
+                </p>
+                <a href="mailto:contact@example.com" class="btn-primary">Send Message</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal Easter Egg -->
+    <div class="terminal-easter-egg" id="terminal-egg">
+        <div class="terminal-egg-header">
+            <span class="egg-title">$ console</span>
+            <button class="egg-close" onclick="closeTerminal()">&times;</button>
+        </div>
+        <div class="terminal-egg-body" id="terminal-output">
+            <div class="terminal-prompt">
+                <span class="prompt-symbol">$&gt;</span>
+                <input type="text" id="terminal-input" class="terminal-egg-input" 
+                       placeholder="Try typing 'hello' or 'hack'" 
+                       autocomplete="off" 
+                       spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal Toggle Button -->
+    <button class="terminal-toggle" onclick="toggleTerminal()" title="Open Console">
+        <span class="terminal-icon">&gt;_</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 AI & ML Engineer. Built with passion for intelligent systems.</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
