@@ -7,11 +7,11 @@
     --color-bg-card: #1a1a1a;
     --color-text-primary: #e0e0e0;
     --color-text-secondary: #a0a0a0;
-    --color-accent-blue: #00d4ff;
-    --color-accent-green: #00ff88;
+    --color-accent-blue: #4a4a5a;
+    --color-accent-green: #5a5a6a;
     --color-border: #2a2a2a;
-    --color-glow-blue: rgba(0, 212, 255, 0.3);
-    --color-glow-green: rgba(0, 255, 136, 0.3);
+    --color-glow-blue: rgba(74, 74, 90, 0.3);
+    --color-glow-green: rgba(90, 90, 106, 0.3);
     
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-code: 'Fira Code', 'Courier New', monospace;
@@ -142,30 +142,31 @@ body {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.gradient-text {
-    background: linear-gradient(135deg, var(--color-accent-blue) 0%, var(--color-accent-green) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.subtitle {
+.name-text {
     color: var(--color-text-primary);
-    font-size: 3rem;
     display: block;
 }
 
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-text-secondary);
     margin-bottom: 2.5rem;
     max-width: 600px;
+    line-height: 1.8;
 }
 
 .hero-cta {
@@ -253,7 +254,7 @@ body {
     width: 200px;
     height: 200px;
     border: 2px solid var(--color-accent-blue);
-    background: rgba(0, 212, 255, 0.05);
+    background: rgba(74, 74, 90, 0.05);
     box-shadow: 0 0 20px var(--color-glow-blue);
 }
 
@@ -286,6 +287,11 @@ body {
 
 .fade-in-delay-2 {
     animation: fadeIn 1s ease-in 0.6s forwards;
+    opacity: 0;
+}
+
+.fade-in-delay-3 {
+    animation: fadeIn 1s ease-in 0.9s forwards;
     opacity: 0;
 }
 
@@ -339,7 +345,7 @@ body {
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--color-accent-blue);
-    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2),
+    box-shadow: 0 20px 40px rgba(74, 74, 90, 0.2),
                 0 0 40px var(--color-glow-blue);
 }
 
@@ -378,7 +384,7 @@ body {
 
 .tag {
     padding: 0.4rem 0.9rem;
-    background: rgba(0, 212, 255, 0.1);
+    background: rgba(74, 74, 90, 0.1);
     border: 1px solid var(--color-accent-blue);
     border-radius: 20px;
     font-size: 0.85rem;
@@ -392,7 +398,7 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(90, 90, 106, 0.1) 0%, transparent 70%);
 }
 
 .organism {
@@ -572,7 +578,7 @@ body {
 
 .ui-result {
     padding: 1.5rem;
-    background: rgba(0, 255, 136, 0.05);
+    background: rgba(90, 90, 106, 0.05);
     border-radius: 8px;
     border: 1px solid var(--color-accent-green);
 }
@@ -742,7 +748,7 @@ body {
     background: rgba(26, 26, 26, 0.98);
     border: 1px solid var(--color-accent-green);
     border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 10px 40px rgba(90, 90, 106, 0.3);
     z-index: 999;
     display: none;
     flex-direction: column;

@@ -63,7 +63,7 @@ class NeuralNetwork {
         this.nodes.forEach(node => {
             this.ctx.beginPath();
             this.ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = 'rgba(0, 212, 255, 0.6)';
+            this.ctx.fillStyle = 'rgba(74, 74, 90, 0.6)';
             this.ctx.fill();
         });
     }
@@ -80,7 +80,7 @@ class NeuralNetwork {
                     this.ctx.moveTo(this.nodes[i].x, this.nodes[i].y);
                     this.ctx.lineTo(this.nodes[j].x, this.nodes[j].y);
                     const opacity = (150 - distance) / 150 * 0.3;
-                    this.ctx.strokeStyle = `rgba(0, 255, 136, ${opacity})`;
+                    this.ctx.strokeStyle = `rgba(90, 90, 106, ${opacity})`;
                     this.ctx.lineWidth = 1;
                     this.ctx.stroke();
                 }
