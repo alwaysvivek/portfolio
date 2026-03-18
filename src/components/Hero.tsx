@@ -56,10 +56,10 @@ export default function Hero() {
             opacity: { delay: 0.5 },
             textShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="flex items-center gap-4 px-6 py-3 rounded-full glass text-[10px] md:text-xs font-mono text-secondary uppercase tracking-[0.3em]"
+          className="flex items-center justify-center gap-3 px-6 py-3 rounded-full glass text-[10px] md:text-xs font-mono text-secondary uppercase tracking-[0.2em] md:tracking-[0.3em] max-w-[95vw] sm:max-w-none"
         >
-          <span className="w-2 h-2 rounded-full bg-strawhat shadow-[0_0_10px_#F4D03F]" />
-          <span className="drop-shadow-[0_0_10px_rgba(255,140,0,0.15)] leading-tight">
+          <span className="shrink-0 w-2 h-2 rounded-full bg-strawhat shadow-[0_0_10px_#F4D03F]" />
+          <span className="drop-shadow-[0_0_10px_rgba(255,140,0,0.15)] leading-tight text-center">
             Currently <span className="text-primary font-bold">IDLE</span> — Monitoring for high-impact challenges.
           </span>
         </motion.div>
