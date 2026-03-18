@@ -46,23 +46,6 @@ export default function Hero() {
           Building <span className="text-primary font-medium">agentic, AI-native products</span> while mentoring a <span className="text-primary font-medium">global community</span> of learners and engineers.
         </p>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ 
-            opacity: 1,
-            textShadow: ["0 0 5px rgba(255,140,0,0)", "0 0 10px rgba(255,140,0,0.2)", "0 0 5px rgba(255,140,0,0)"]
-          }}
-          transition={{ 
-            opacity: { delay: 0.5 },
-            textShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="flex items-center justify-center gap-3 px-6 py-3 rounded-full glass text-[10px] md:text-xs font-mono text-secondary uppercase tracking-[0.2em] md:tracking-[0.3em] max-w-[95vw] sm:max-w-none"
-        >
-          <span className="shrink-0 w-2 h-2 rounded-full bg-strawhat shadow-[0_0_10px_#F4D03F]" />
-          <span className="drop-shadow-[0_0_10px_rgba(255,140,0,0.15)] leading-tight text-center">
-            Currently <span className="text-primary font-bold">IDLE</span> — Monitoring for high-impact challenges.
-          </span>
-        </motion.div>
       </motion.div>
     </section>
   );
