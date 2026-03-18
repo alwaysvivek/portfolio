@@ -66,11 +66,11 @@ export default function Projects({ filter, onClearFilter, onSelectProject }: Pro
               <div className="relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
                   <div className="max-w-2xl">
-                    <div className="flex items-center gap-4 mb-4">
-                      <h3 className="text-2xl md:text-3xl font-bold font-display group-hover:text-primary transition-colors">
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                      <h3 className="text-2xl md:text-3xl font-bold font-display group-hover:text-primary transition-colors mr-2">
                         {project.title}
                       </h3>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         <span className={`text-[10px] font-mono px-3 py-1 rounded-full border transition-colors ${
                           project.domain === 'Systems Engineering' ? 'bg-accent/10 border-accent/20 text-accent' : 
                           project.domain === 'Artificial Intelligence' ? 'bg-kyubi/10 border-kyubi/20 text-kyubi' : 'bg-primary/5 border-primary/10 text-primary/80'
@@ -114,7 +114,7 @@ export default function Projects({ filter, onClearFilter, onSelectProject }: Pro
                       View Details
                     </motion.button>
                     
-                    <div className="flex gap-2">
+                    <div className="flex gap-3">
                       <motion.a
                         href={project.link}
                         target="_blank"
@@ -127,7 +127,7 @@ export default function Projects({ filter, onClearFilter, onSelectProject }: Pro
                             : 'bg-primary text-background hover:bg-accent hover:text-white shadow-primary/10'
                         }`}
                       >
-                        {project.isGithubOnly ? 'GitHub' : (project.linkLabel || 'Live')}
+                        <span className="whitespace-nowrap">{project.isGithubOnly ? 'GitHub' : (project.linkLabel || 'Live')}</span>
                         {project.isGithubOnly ? <Github className="w-4 h-4" /> : <ArrowUpRight className="w-4 h-4" />}
                       </motion.a>
 
@@ -139,8 +139,9 @@ export default function Projects({ filter, onClearFilter, onSelectProject }: Pro
                           whileHover={{ scale: 1.05, y: -2 }}
                           whileTap={{ scale: 0.95 }}
                           className="flex items-center justify-center px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 text-secondary hover:text-primary hover:border-white/20 transition-all shadow-xl"
+                          aria-label="GitHub Repository"
                         >
-                          <Github className="w-4 h-4 md:w-5 h-5" />
+                          <Github className="w-4 h-4 md:w-5 md:h-5" />
                         </motion.a>
                       )}
                     </div>

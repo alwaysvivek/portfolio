@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Search } from 'lucide-react';
+import { Search, Linkedin, Github } from 'lucide-react';
 import { SOCIAL_LINKS } from '../constants';
 
 interface HeaderProps {
@@ -45,12 +45,12 @@ export default function Header({ onOpenPalette }: HeaderProps) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[9px] md:text-[10px] font-bold text-secondary hover:text-accent transition-all tracking-[0.2em] md:tracking-[0.25em] uppercase relative group"
+              className="text-secondary hover:text-accent transition-all relative group flex items-center justify-center p-2"
               whileHover={{ y: -2 }}
+              aria-label={link.label}
             >
-              <span className="hidden xs:inline">{link.label}</span>
-              <span className="xs:hidden">{link.label.substring(0, 2)}</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full" />
+              {link.label === 'LinkedIn' ? <Linkedin className="w-4 h-4" /> : <Github className="w-4 h-4" />}
+              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-accent transition-all group-hover:w-full" />
             </motion.a>
           ))}
         </nav>
